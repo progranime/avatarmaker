@@ -1,0 +1,23 @@
+body {
+	background: none !important;
+}
+
+#library-table svg{
+	height: 120px !important;
+}
+
+textarea {
+	height: 200px;
+}
+
+.tab-content {
+	width: 100%;
+}
+
+#banners-table img {
+	width: 200px;
+}
+
+.table-responsive {
+	display: table;
+}

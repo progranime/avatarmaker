@@ -1,0 +1,24 @@
+.popover {
+	opacity: 0.8 !important;
+
+	.arrow {
+		&:after {
+			border-bottom-color: #000;
+		}
+	}
+
+	.popover {
+
+		&-header {
+			
+		}
+
+		&-body {
+			width: 150px;
+			background-color: #000;
+			color: #fff;
+		}
+
+	}
+
+}

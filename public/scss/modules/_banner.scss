@@ -1,0 +1,73 @@
+// background switcher
+.bg-switcher {
+	background-position: center center;
+    background-size: cover;
+    height: 300px;
+
+
+	@include media-breakpoint-up (sm) {
+		height: 400px;
+	}
+
+}
+
+.banner--container {
+	position: relative;
+	height: 380px;
+	background-image: url('../../images/banners/secondary-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	margin: 15px 0px;
+    &.with-bg {
+    	background-color: rgba(179,209,219,0.3);
+    }
+
+    /* @include media-breakpoint-up (sm) {
+    	background-size: 100% 100%;
+    	margin: 15px 0px;
+    } */
+
+	.banner--wrapper { 
+		position: absolute;
+		top: 0;
+	    left: 50%;
+	    transform: translate(-50%, 50%);
+	    text-align: center;
+		
+	    @include media-breakpoint-up (sm) {
+			width: 500px;
+	    }
+		
+		.header {
+			color: $secondary-color !important;
+			font-size: 48px;
+			font-family: 'KG She Persisted', Arial, sans-serif;
+		}
+		
+		.sub-header {
+			font-size: 24px;
+			font-family: 'Myriad Pro Light', Arial, sans-serif;
+		}
+
+
+		input[type="text"] {
+			display: block;
+		    width: 100%;
+		    border-radius: 15px;
+		    border: 1px solid $primary-color;
+		    padding: 5px 30px;
+		    background-image: url("../../images/icons/search.png");
+		    background-repeat: no-repeat;
+		    background-position: 10px center;
+
+		    &:active,
+		    &:hover,
+		    &:focus {
+				outline: none;
+		    }
+		}
+
+	}
+
+}

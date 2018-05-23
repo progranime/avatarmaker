@@ -1,0 +1,299 @@
+<div class="avatar-maker_customization">
+	<script id="hbAvatarCustomization" type="text/x-handlebars-template">
+	<div class="hb-wrapper">
+
+		<div class="nav-container">
+			<div class="nav-wrapper">
+				<ul class="nav nav-pills nav-item">
+				    <li class="active"><a data-toggle="pill" href="#collectionSkinColor"><img src="public/images/creator/skin-color-colored.png" data-active="public/images/creator/skin-color-colored.png" data-inactive="public/images/creator/skin-color-bw.png"></a></li>
+				    {{#if avatar.male}}
+				    	<li><a data-toggle="pill" href="#collectionHead"><img src="public/images/creator/male-head-bw.png" data-active="public/images/creator/male-head-colored.png" data-inactive="public/images/creator/male-head-bw.png"></a></li>
+				    	<li><a data-toggle="pill" href="#collectionUpperBody"><img src="public/images/creator/male-upper-body-bw.png" data-active="public/images/creator/male-upper-body-colored.png" data-inactive="public/images/creator/male-upper-body-bw.png"></a></li>
+				    	<li><a data-toggle="pill" href="#collectionLowerBody"><img src="public/images/creator/male-lower-body-bw.png" data-active="public/images/creator/male-lower-body-colored.png" data-inactive="public/images/creator/male-lower-body-bw.png"></a></li>
+				    	<li><a data-toggle="pill" href="#collectionShoes"><img src="public/images/creator/male-shoe-bw.png" data-active="public/images/creator/male-shoe-colored.png" data-inactive="public/images/creator/male-shoe-bw.png"></a></li>
+				    {{else}}
+				    	<li><a data-toggle="pill" href="#collectionHead"><img src="public/images/creator/female-head-bw.png" data-active="public/images/creator/female-head-colored.png" data-inactive="public/images/creator/female-head-bw.png"></a></li>
+				    	<li><a data-toggle="pill" href="#collectionUpperBody"><img src="public/images/creator/female-upper-body-bw.png" data-active="public/images/creator/female-upper-body-colored.png" data-inactive="public/images/creator/female-upper-body-bw.png"></a></li>
+				    	<li><a data-toggle="pill" href="#collectionLowerBody"><img src="public/images/creator/female-lower-body-bw.png" data-active="public/images/creator/female-lower-body-colored.png" data-inactive="public/images/creator/female-lower-body-bw.png"></a></li>
+				    	<li><a data-toggle="pill" href="#collectionShoes"><img src="public/images/creator/female-shoe-bw.png" data-active="public/images/creator/female-show-colored.png" data-inactive="public/images/creator/female-shoe-bw.png"></a></li>
+				    {{/if}}
+
+				    {{#if avatar.male.drums}}
+						<li><a data-toggle="pill" href="#collectionInstruments"><img src="public/images/creator/instrument-bw.png" data-active="public/images/creator/instrument-colored.png" data-inactive="public/images/creator/instrument-bw.png"></a></li>
+				    {{/if}}
+				    {{#if avatar.female.drums}}
+						<li><a data-toggle="pill" href="#collectionInstruments"><img src="public/images/creator/instrument-bw.png" data-active="public/images/creator/instrument-colored.png" data-inactive="public/images/creator/instrument-bw.png"></a></li>
+				    {{/if}}
+				</ul>
+			</div>
+		</div>
+
+		<div class="tab-content tab-content-collection pad-horizontal">
+			<!-- Start Skin Color -->
+			<div id="collectionSkinColor" class="tab-pane fade in active show">
+				<div class="collection collection__skin">
+					<div class="collection__title">SKIN</div>
+					
+					<div class="collection__title">COLORS</div>
+					<div class="collection-color collection-color__skin">
+						{{#each skinColors}}
+						<div class="collection__item" data-color="rgb{{this}}" style="background-color: rgb{{this}}"></div>
+						{{/each}}
+					</div>
+					
+				</div>
+			</div>
+			<!-- End Skin Color -->
+
+    		<!-- Start of Head -->
+			<div id="collectionHead" class="tab-pane">
+
+				<div class="collection collection__hair">
+					<div class="collection__title">HAIR</div>
+
+					<div class="collection__title">COLORS</div>
+					<div class="collection collection-color collection-color__hair
+					collection-color--circle">
+						{{#each hairColors}}
+						<div class="collection__item" data-color="rgb{{this}}" style="background-color: rgb{{this}}"></div>
+						{{/each}}
+					</div>
+
+					<div class="collection__title">STYLES</div>
+					{{#each avatar}}
+						{{#each hair}}
+						<div class="collection__item collection__item--circle">
+							<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+						</div>
+						{{/each}}
+					{{/each}}
+					
+				</div>
+
+				<hr>
+				<div class="collection collection__head">
+	     			<div class="collection__title">HEAD</div>
+	     			{{#each avatar}}
+		    			{{#each head}}
+			    		<div class="collection__item collection__item--circle">
+			    			<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+			    			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+			    		</div>
+		    			{{/each}}
+	    			{{/each}}
+				</div>
+
+				<hr>
+				<div class="collection collection__eyebrows">
+	    			<div class="collection__title">EYEBROWS</div>
+	     			{{#each avatar}}
+		    			{{#each eyebrows}}
+			    		<div class="collection__item collection__item--circle">
+			    			<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+			    			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+			    		</div>
+		    			{{/each}}
+	    			{{/each}}
+				</div>
+			
+				<hr>
+				<div class="collection collection__eyes">
+	    			<div class="collection__title">Eyes</div>
+	     			{{#each avatar}}
+		    			{{#each eyes}}
+			    		<div class="collection__item collection__item--circle">
+			    			<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+			    			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+			    		</div>
+		    			{{/each}}
+	    			{{/each}}
+				</div>
+				<hr>
+				<div class="collection collection__mouth">
+	    			<div class="collection__title">Mouth</div>
+	     			{{#each avatar}}
+		    			{{#each mouth}}
+			    		<div class="collection__item collection__item--circle">
+			    			<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+			    			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+			    		</div>
+		    			{{/each}}
+	    			{{/each}}
+	    		</div>
+
+
+			</div>
+
+
+    		<!-- End of Head -->
+
+			<!-- Start Upper Body -->
+			<div id="collectionUpperBody" class="tab-pane">
+				<div class="collection collection__clothes-upper">
+
+					<div class="collection__title">UPPER BODY</div>
+
+					<div class="collection__title">COLORS</div>
+					<div class="collection-color collection-color--circle collection-color__clothes-upper">
+						{{#each brandColors}}
+						<div class="collection__item" data-color="rgb{{this}}" style="background-color: rgb{{this}}"></div>
+						{{/each}}
+					</div>
+
+					<div class="collection__title">STYLES</div>
+					{{#each avatar}}
+						{{#each clothesUpper}}
+						<div class="collection__item collection__item--circle">
+							<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+						</div>
+						{{/each}}
+					{{/each}}
+				
+				</div>
+				
+			</div>
+			<!-- End Upper Body -->
+
+			<!-- Start Lower Body -->
+			<div id="collectionLowerBody" class="tab-pane">
+				<div class="collection collection__clothes-lower">
+					<div class="collection__title">LOWER BODY</div>
+
+					<div class="collection__title">COLORS</div>
+					<div class="collection-color collection-color--circle collection-color__clothes-lower">
+						{{#each clothesLowerColors}}
+						<div class="collection__item" data-color="rgb{{this}}" style="background-color: rgb{{this}}"></div>
+						{{/each}}
+					</div>
+
+					<div class="collection__title">STYLES</div>
+					{{#each avatar}}
+						{{#each clothesLower}}
+						<div class="collection__item collection__item--circle">
+							<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+						</div>
+						{{/each}}
+					{{/each}}
+				</div>
+			</div>
+			<!-- End Lower Body -->
+			
+
+			<!-- Start Shoes -->
+			<div id="collectionShoes" class="tab-pane">
+				<div class="collection collection__shoes">
+
+					<div class="collection__title">SHOES</div>
+
+					<div class="collection__title">COLORS</div>
+					<div class="collection-color collection-color--circle collection-color__shoes">
+						{{#each brandColors}}
+						<div class="collection__item" data-color="rgb{{this}}" style="background-color: rgb{{this}}"></div>
+						{{/each}}
+					</div>
+
+					<div class="collection__title">STYLES</div>
+					{{#each avatar}}
+						{{#each shoes}}
+						<div class="collection__item collection__item--circle">
+							<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+						</div>
+						{{/each}}
+					{{/each}}
+				
+				</div>
+				
+			</div>
+			<!-- End Shoes -->
+
+
+			<!-- Start Instrument -->
+			<div id="collectionInstruments" class="tab-pane">
+				<div class="collection collection__instruments">
+
+					<div class="collection__title">INSTRUMENTS</div>
+
+					<div class="collection__title">STYLES</div>
+					<!-- Start Drums Instrument -->
+					{{#each avatar}}
+						{{#each drums}}
+						<div class="collection__item collection__item--circle">
+							<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+						</div>
+						{{/each}}
+					{{/each}}
+					<!-- End Drums Instrument -->
+					
+					<!-- Start Guitar Instrument -->
+					{{#each avatar}}
+						{{#each guitars}}
+						<div class="collection__item collection__item--circle">
+							<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+						</div>
+						{{/each}}
+					{{/each}}
+					<!-- End Guitar Instrument -->
+
+					<!-- Start Devices -->
+					{{#each avatar}}
+						{{#each devices}}
+						<div class="collection__item collection__item--circle">
+							<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+						</div>
+						{{/each}}
+					{{/each}}
+					<!-- End Devices -->
+
+					<!-- Start Devices -->
+					{{#each avatar}}
+						{{#each keyboards}}
+						<div class="collection__item collection__item--circle">
+							<img src="public/images/thumbnail/{{@key}}.svg" alt="">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    			{{{this}}}
+			    			</svg>
+						</div>
+						{{/each}}
+					{{/each}}
+					<!-- End Devices -->
+
+				</div>
+				
+			</div>
+			<!-- End Instrument -->
+
+
+		</div>
+	</div>
+	</script>
+
+</div>

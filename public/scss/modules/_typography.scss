@@ -1,0 +1,37 @@
+@font-face {
+	font-family: "KG She Persisted";
+	src: url("../fonts/KGShePersisted.ttf");
+}
+
+@font-face {
+	font-family: "Myriad Pro Light";
+	src: url("../fonts/MyriadPro-Light.otf");
+}
+
+@font-face {
+	font-family: "Myriad Pro";
+	src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $primary-color;
+	font-weight: 500;
+	font-family: 'Myriad Pro', Arial, sans-serif;
+}
+
+.font {
+	
+	&__header {
+		font-family: 'KG She Persisted', Arial, sans-serif;
+	}
+
+	&__sub {
+		font-family: 'Myriad Pro Light', Arial, sans-serif;
+	}
+
+}

@@ -1,0 +1,129 @@
+.nav-container {
+	// min-width: 100%;
+	overflow-x: auto;
+	
+	@include media-breakpoint-up (sm) {
+		min-width: auto;
+		overflow-x: hidden;
+		width: 120px;
+		float: left;
+		box-shadow: 0px 0px 10px 0px #616060;
+    	border-radius: 100px;
+    	margin: 0px 40px 0px 60px;
+	}
+
+	.nav-wrapper {
+		// width: 620px;
+		// min-width: 100%;
+
+		@include media-breakpoint-up (sm) {
+			width: auto;
+		}
+
+		.nav {
+			background-color: #fff;
+			padding: 10px 0px;
+
+			@include media-breakpoint-up (sm) {
+				padding: 10px 8px;
+				border-radius: 100px;
+			}
+			
+			&.nav-item {
+				display: table;
+				width: 100%;
+
+				@include media-breakpoint-up (sm) {
+					display: list-item;
+				}
+				 
+
+				li {
+					display: table-cell;
+					vertical-align: middle;
+					float: none;
+					text-align: center;
+					padding: 0px 15px;
+					
+					@include media-breakpoint-up (sm) {
+						float: none;
+						padding: 10px 0px;
+						display: list-item;
+
+						&:not(:last-child) {
+							border-right: none !important;
+							border-bottom: 1px solid $primary-color;
+						}
+					}
+
+					&:not(:last-child) {
+						border-right: 1px solid #ccc;
+					}
+
+					a {
+						background-color: transparent !important;
+
+						img {
+							width: auto;
+							height: auto;
+
+							@include media-breakpoint-up (sm) {
+								display: block;
+								margin: 0 auto;
+								width: auto;
+								height: auto;
+							}
+
+						}
+
+					}
+					
+					&.active {
+						
+						a {
+							background-color: #f4f4f4;
+						
+						}
+
+						@include media-breakpoint-up (sm) {
+
+							&:first-child {
+
+								a {
+									border-top-left-radius: 50px;
+									border-top-right-radius: 50px;
+								}
+							}
+
+							&:last-child {
+
+								a {
+									border-bottom-left-radius: 50px;
+									border-bottom-right-radius: 50px;
+								}
+							}
+
+						}
+
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.tab-content {
+	padding: 0px 15px;
+	
+	@include media-breakpoint-up (sm) {
+		float: left;
+		width: calc(100% - 220px);
+		height: 75vh;
+		overflow-y: auto;
+	}
+
+}

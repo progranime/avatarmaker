@@ -1,0 +1,24 @@
+{
+	"position" : [
+		{
+			"name"     : "Standing",
+			"fileName" : "icon-avatar-female-standing.svg",
+			"position" : "standing"
+		},
+		{
+			"name"     : "Sitting",
+			"fileName" : "icon-avatar-female-sitting.svg",
+			"position" : "sitting"
+		},
+		{
+			"name"     : "Playing Drums",
+			"fileName" : "icon-avatar-female-sitting.svg",
+			"position" : "playingdrums"
+		},
+		{
+			"name"     : "Playing Guitar",
+			"fileName" : "icon-avatar-female-guitar.svg",
+			"position" : "playingguitar"
+		}
+	]
+}

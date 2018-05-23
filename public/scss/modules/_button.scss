@@ -1,0 +1,44 @@
+.btn {
+	&--standard {
+		border: 1px solid #377889;
+	    border-radius: 15px;
+	    background-color: #fff;
+	    color: $primary-color;
+	    font-weight: bold;
+	    min-width: 100px;
+
+	    &:hover,
+	    &:active,
+	    &:focus {
+	    	text-decoration: none;
+	    	outline: none;
+	    	color: $primary-color;
+	    }
+	}
+
+	&--shade {
+		border-radius: 15px;
+	    color: $primary-color;
+	    background-color: transparent;
+	    min-width: 100px;
+	    max-width: 100%;
+
+	    &.is-active {
+	    	background-color: #367888;
+	    	color: #fff;
+	    }
+
+	    &:active,
+	    &:hover,
+	    &:focus {
+	    	outline: none;
+			box-shadow: none;
+	    }
+	}
+
+	&--flat {
+		border: none;
+	}
+
+
+}

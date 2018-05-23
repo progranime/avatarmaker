@@ -1,0 +1,293 @@
+.card-container {
+	.card {
+		width: 100%;
+		height: auto;
+		box-shadow: 1px 1px 4px #ccc;
+		float: left;
+		margin: 3px 0px;
+		background-color: #fff;
+		transition: .5s ease-in-out;
+
+		@include media-breakpoint-up (md) {
+			width: 300px;
+			margin: 3px 4px;
+		}
+
+		.card-header {
+			padding: 10px 3px;
+			background-color: #FFF;
+			border: none;
+
+			.title {
+				display: block;
+				position: absolute;
+				margin-left: 15px;
+				width: 200px;
+    			word-break: break-all;
+    			text-transform: uppercase;
+			}
+			
+			.favorite {
+				float: right;
+				margin: 0px 5px;
+				cursor: pointer;
+				font-size: 25px;
+				color: #e8e8e8;
+				-webkit-text-fill-color: white;
+			    -webkit-text-stroke-width: 1px;
+			    -webkit-text-stroke-color: #DDD;
+
+				&.is-active {
+					-webkit-text-fill-color: #ffd800;
+				    -webkit-text-stroke-width: 0px;
+				    -webkit-text-stroke-color: #ffd800;
+				}
+
+			}
+			
+			.checkbox {
+				display: inline-block;
+				width: 25px;
+				height: 18px;
+				position: relative;
+				margin: 0;
+				float: right;
+				margin: 0px 5px;
+				
+				.group-download {
+					margin: 0;
+				}
+
+				label {
+					cursor: pointer;
+					position: absolute;
+					width: 25px;
+					height: 25px;
+					top: 0;
+				  	left: 0;
+					background: #fff;
+					border:1px solid #e8e8e8;
+					
+					&:after {
+						opacity: 0.2;
+						content: '';
+						position: absolute;
+						width: 9px;
+						height: 5px;
+						background: transparent;
+						top: 6px;
+						left: 7px;
+						border: 3px solid #333;
+						border-top: none;
+						border-right: none;
+						transform: rotate(-45deg);
+					}
+
+					&:hover::after {
+						opacity: 0.5;
+					}
+
+				}
+
+				input[type=checkbox]:checked + label:after {
+					opacity: 1;
+				}
+
+			}
+		}
+
+		.title-lv {
+			display: none;
+		}
+
+		.img-holder {
+			width: 200px;
+			height: auto;
+			display: block;
+    		margin: auto;
+    		cursor: pointer;
+			
+			svg {
+				height: 200px;
+				width: 175px;
+			}
+		}
+
+		.card-menu {
+			height: 50px;
+			border-top: 2px solid #f5f6fa;
+			width: 100%;
+			display: table;
+
+			.custom-select {
+				width: 50%;
+				position: relative;
+				display: table-cell;
+				text-align: center;
+				border: none;
+				background-image: none;
+
+
+				img {
+					width: 35px;
+					height: 35px;
+					display: block;
+					margin: auto;
+					margin-top: 5px;
+					cursor: pointer;
+				}
+
+				span {
+					color: #cccccc;
+				}
+
+				.options {
+					display: none;
+					position: absolute;
+					width: 100%;
+					background-color: #fff;
+					margin-top: 0px;
+					z-index: 1;
+					left: 0;
+					
+					.options-item {
+						cursor: pointer;
+					    padding: 15px;
+					    background: #fff;
+						
+						&:not(:last-child) {
+							border-bottom: 2px solid #f5f6fa;
+						}
+
+						&.is-active {
+							background-color: #f4f4f4;
+						}
+
+						&:hover {
+							background-color: #f4f4f4;
+						}
+					}
+				}
+				//opening the dropdown will be in js
+				
+				&:nth-child(odd) {
+					border-right: 2px solid #f5f6fa;
+				}
+
+			}
+		}
+
+	}
+
+	&.listview {
+
+		.card {
+			width: 100%;
+			transition: .5s ease-in-out;
+			display: table;		
+
+			@include media-breakpoint-up (md) {
+				width: 48%;
+				height: auto;
+			}
+			
+			&:nth-child(odd) {
+				@include media-breakpoint-up (md) {
+					margin: 3px 20px 3px 0px;
+				}
+			}
+
+			&:nth-child(even) {
+				@include media-breakpoint-up (md) {
+					margin: 3px 0px 3px -5px;
+				}
+			}
+
+
+			.card-header {
+				display: table-cell;
+				vertical-align: top;
+				width: 23%;
+				@include media-breakpoint-up (md) {
+					width: 20%;
+				}
+				
+				.title {
+					display: none;
+				}
+
+				.checkbox {
+					float: left;
+					margin: 0;
+				}
+
+				.favorite {
+					float: left;
+				}
+			}
+
+			.title-lv {
+				display: table-cell;
+				vertical-align: middle;
+				word-break: break-all;
+				width: 20%;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			.img-holder {
+				width: 80px;
+				height: 100px;
+				display: table-cell;
+				vertical-align: middle;
+
+				svg {
+					width: 80px;
+					height: 100px;
+				}
+			}
+
+			.card-menu {
+				height: 105px;
+
+				.custom-select {
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
+					border: none;
+					padding: 0;
+					
+					img {
+						width: 25px;
+						height: 25px;
+						display: block;
+						margin: auto;
+						margin-top: 5px;
+						cursor: pointer;
+					}
+
+					span {
+						color: #cccccc;
+					}
+
+					&:nth-child(odd) {
+						border-left: 2px solid #f5f6fa;
+						border-right: 2px solid #f5f6fa;
+					}
+
+					.options {
+						margin-top: 20px;
+
+						.options-item {
+							padding: 1px;
+							color: #0099ff;
+							border: none;
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+}

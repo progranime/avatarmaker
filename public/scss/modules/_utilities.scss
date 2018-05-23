@@ -1,0 +1,33 @@
+.text-color {
+	
+	&--red {
+		color: $secondary-color;
+	}
+
+	&--primary {
+		color: $primary-color;
+	}
+
+}
+
+.text {
+
+	&--underline {
+		border-bottom: 2px solid $primary-color;
+		display: inline-block;
+	}
+
+}
+
+.is-disabled {
+	pointer-events: none;
+
+	&--link {
+		pointer-events: none;
+		color: #ccc !important;
+
+		p {
+			color: #ccc !important;
+		}
+	}
+}

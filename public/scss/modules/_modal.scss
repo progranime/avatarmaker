@@ -1,0 +1,446 @@
+//changing the modal layout for mobile only and default for desktop
+.modal {
+	@include media-breakpoint-down (xs) {
+		padding-left: 0px !important;
+		background-color: #efefef;
+	}
+
+	.modal-dialog {
+		@include media-breakpoint-down (xs) {
+			margin: 0px;
+		}
+
+		@include media-breakpoint-down (sm) {
+		    /* transform: translate(-50%, -50%) !important;
+		    top: 50%;
+		    left: 50%;
+		    position: absolute; */
+		    max-width: 600px;
+		}
+
+		.modal-content {
+			@include media-breakpoint-down (xs) {
+				border-radius: 0px;
+				border: none;
+				box-shadow: none;
+				position: absolute;
+			    width: 100%;
+			    height: 100vh;
+			    top: 0;
+			    left: 0;
+			    bottom: 0;
+			    background-color: #efefef;
+			}
+
+			@include media-breakpoint-up (sm) {
+				background-color: #f3fbfd;
+				border-radius: 20px;
+			}
+
+			.modal-header {
+				border-bottom: none;
+				padding: 0;
+				
+			}
+
+			.modal-body {
+
+			}
+
+			.modal-footer {
+				border-top: none;
+			}
+		
+
+		}
+
+
+	}
+
+}
+
+.modal-backdrop {
+	&.in {
+		opacity: 0;
+
+		@include media-breakpoint-up (sm) {
+			opacity: 0.5;
+		}
+	}
+}
+
+// for group download modal
+
+.modal#group-download-modal {
+	padding-right: 0 !important;
+	.modal-dialog {
+
+		.modal-content {
+
+			.modal-header {
+				text-align: left;
+				border-bottom: none;
+
+				@include media-breakpoint-up (sm) {
+					text-align: right;
+				}
+				
+			}
+
+			.modal-body {
+				
+				.group-download-container {
+
+					.group-download-lists {
+					    height: 350px;
+					    overflow-y: scroll;
+					    padding: 0px 8px;
+					    margin-top: 50px;
+					    overflow-x: hidden;
+						
+						@include media-breakpoint-up (sm) {
+							height: 500px;
+							margin-top: 0;
+						}
+
+						.list-panel {
+							margin: 0px 0px 15px 0px;
+							background-color: #fff;
+							border: 1px solid #eee;
+
+							.img-holder {
+
+								svg {
+									width: 100px;
+									height: 80px;
+								}
+
+							}
+						}
+
+					}
+
+				}
+
+				.group-download-options {
+					text-align: center;
+					color: $primary-color;
+
+					@include media-breakpoint-up (sm) {
+						text-align: left;
+					}
+
+					p {
+						font-weight: bold;
+
+						&:nth-child(3) {
+							@include media-breakpoint-up (sm) {
+								margin-top: 50px;
+							}
+						}	
+					}
+				}
+
+
+			}
+
+			.modal-footer {
+
+			}
+
+		}
+
+	}
+
+}
+
+
+// for terminal modal 
+
+.modal#terminal-modal {
+	padding-right: 0 !important;
+
+	.modal-dialog {
+
+		.modal-content {
+	
+			&.terminal-modal--container {
+
+			}
+
+
+			.modal-header {
+				
+				.btn-back {
+					color: $primary-color;
+					cursor: pointer;
+
+					@include media-breakpoint-up (sm) {
+						display: none !important;
+					}
+				}
+				
+			}
+
+			.modal-body {
+				padding: 0;
+				
+				@include media-breakpoint-up (sm) {
+					padding: 15px;
+				}
+
+				.header {
+					color: $secondary-color;
+					font-size: 50px;
+					font-family: 'KG She Persisted', Arial, sans-serif;
+				}
+
+				.sub-header {
+					color: $primary-color;
+					font-size: 18px;
+				}
+	
+				.img-holder {
+					text-align: center;
+
+					@include media-breakpoint-up (sm) {
+						padding: 0px 30px;
+					    background-color: #fff;
+					    box-shadow: 3px 3px 15px #ccc;
+					    border-radius: 15px;
+					}
+			
+					svg {
+						width: 30vh;
+						height: 30vh;
+
+						@include media-breakpoint-up (sm) {
+							width: 15vh;
+							height: 40vh;
+						}
+
+						@include media-breakpoint-up (md) {
+							width: 30vh;
+							height: 60vh;
+						}
+					}
+
+				}
+
+				ul.terminal-modal--options {
+					list-style: none;
+					padding: 0;
+					@include media-breakpoint-up (sm) {
+						position: relative;
+					}
+
+					li {
+						display: inline-block;
+						width: 30%;
+						cursor: pointer;
+
+						&.downloads {
+
+							.downloads-dropdown {
+								position: absolute;
+							    left: 0;
+							    top: 0;
+							    bottom: 0;
+							    width: 100%;
+							    background-color: #efefef;
+							    transform: translateX(100%);
+							    @include transition(all .5s ease-in-out);
+								
+								@include media-breakpoint-up (sm) {
+									display: none;
+									position: absolute;
+									top: auto;
+									left: 0;
+									bottom: auto;
+								    background-color: #fff;
+								    width: 100%;
+								    padding: 10px;
+								    height: auto;
+								    border-radius: 15px;
+									box-shadow: 3px 3px 15px #ccc;
+								}
+
+								&:before {
+									@include media-breakpoint-up (sm) {
+										content: "";
+									    border-left: 10px solid transparent;
+									    border-right: 10px solid transparent;
+									    border-bottom: 10px solid #fff;
+									    position: absolute;
+									    top: -10px;
+									    transform: rotate(0deg);
+									    background: transparent;
+									    left: 17%;
+									}
+								}
+
+
+								&.is-visible {
+									transform: translateX(0);
+
+									@include media-breakpoint-up (sm) {
+										display: block;
+									}
+								}
+
+							}
+
+						}
+
+						&.save {
+
+							.save-dropdown {
+								position: absolute;
+							    left: 0;
+							    top: 0;
+							    bottom: 0;
+							    width: 100%;
+							    background-color: #efefef;
+							    transform: translateX(100%);
+							    @include transition(all .5s ease-in-out);
+								
+								@include media-breakpoint-up (sm) {
+									display: none;
+									position: absolute;
+									top: auto;
+									left: 0;
+									bottom: auto;
+								    background-color: #fff;
+								    width: 100%;
+								    padding: 10px;
+								    height: auto;
+								    border-radius: 15px;
+									box-shadow: 3px 3px 15px #ccc;
+								}
+
+							
+								&.is-visible {
+									transform: translateX(0);
+
+									@include media-breakpoint-up (sm) {
+										display: block;
+									}
+								}
+
+								&:before {
+									@include media-breakpoint-up (sm) {
+										content: "";
+									    border-left: 10px solid transparent;
+									    border-right: 10px solid transparent;
+									    border-bottom: 10px solid #fff;
+									    position: absolute;
+									    top: -10px;
+									    transform: rotate(0deg);
+									    background: transparent;
+									    left: 48%;
+									}
+								}
+
+							}
+
+						}
+
+						img {
+							width: 30px;
+							margin-bottom: $global-spacing;
+
+							@include media-breakpoint-up (md) {
+								width: auto;
+							}
+						}
+
+						p {
+							font-size: 10px;
+							color: $primary-color;
+
+							@include media-breakpoint-up (md) {
+								font-size: 12px;
+							}
+						}
+					}
+					
+
+				}
+
+			}
+
+			.modal-footer {
+				.flash-message {
+					background-color: $primary-color;
+					color: #fff;
+					padding: 10px;
+					@include transition(all .5s ease-in-out);
+					opacity: 0;
+					text-align: center;
+					font-size: 18px;
+					width: 100%;
+
+					&.is-visible {
+						opacity: 1;
+					}
+				}
+			}
+
+		}
+
+	}
+
+}
+
+
+
+// thumnail modal
+
+.modal#thumbnail-modal {
+	
+	.modal-dialog {
+
+		.modal-content {
+
+			&.thumbnail-modal-container {
+
+				.modal-header {
+	
+				}
+
+				.modal-body {
+				
+					.img-holder {
+						@include media-breakpoint-up (sm) {
+							padding: 0 30px;
+					        border-radius: 15px;
+					        background-color: #fff;
+					        -webkit-box-shadow: 3px 3px 15px #ccc;
+					        box-shadow: 3px 3px 15px #ccc;
+						}
+
+						svg {
+							width: 100%;
+					        height: 300px;
+					        display: block;
+					        margin: 0 auto;
+
+							@include media-breakpoint-up (sm) {
+						        height: 500px;
+							}
+						}
+					}
+
+				}
+
+				.modal-footer {
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

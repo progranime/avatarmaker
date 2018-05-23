@@ -1,0 +1,29 @@
+.form-container {
+	padding: 0px ($global-spacing * 2);
+
+	.form-section {
+		margin: $global-spacing 0px;
+
+		label {
+			display: block;
+			border-bottom: 1px solid $primary-color;
+			color: $primary-color;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"] {
+			border: none;
+			background-color: transparent;
+
+			&:active,
+			&:focus,
+			&:hover {
+				outline: none;
+			}
+		}
+	}
+
+}

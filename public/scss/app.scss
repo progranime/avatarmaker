@@ -1,0 +1,26 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import 'node_modules/font-awesome/scss/font-awesome';
+
+// variables
+@import 'modules/variables';
+
+// utility
+@import 'modules/utilities';
+@import 'modules/border';
+
+// modules
+@import 'modules/header';
+@import 'modules/banner';
+@import 'modules/global';
+@import 'modules/button';
+@import 'modules/select';
+@import 'modules/card';
+@import 'modules/pagination';
+@import 'modules/form';
+@import 'modules/typography';
+@import 'modules/modal';
+@import 'modules/creator';
+@import 'modules/tab';
+@import 'modules/popover';
+

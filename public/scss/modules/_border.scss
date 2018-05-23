@@ -1,0 +1,33 @@
+.border-top {
+	border-top: 1px solid $primary-color;
+}
+
+.border-right {
+	border-right: 1px solid $primary-color;
+}
+
+.border-bottom {
+	border-bottom: 1px solid $primary-color;
+}
+
+.border-left {
+	border-left: 1px solid $primary-color;
+}
+
+.border-bottom-xs {
+	@include media-breakpoint-down (xs) {
+		border-bottom: 1px solid $primary-color;
+	}
+}
+
+.border-right-sm {
+	@include media-breakpoint-up (sm) {
+		border-right: 1px solid $primary-color;
+	}
+}
+
+.border-left-sm {
+	@include media-breakpoint-up (sm) {
+		border-left: 1px solid $primary-color;
+	}
+}

@@ -1,0 +1,72 @@
+{
+	"position" : [
+		{
+			"male": [
+				{
+					"name"     : "Standing",
+					"fileName" : "icon-avatar-male-standing.svg",
+					"position" : "standing"
+				},
+				{
+					"name"     : "Sitting",
+					"fileName" : "icon-avatar-male-sitting.svg",
+					"position" : "sitting"
+				},
+				{
+					"name"     : "Playing Guitar",
+					"fileName" : "icon-avatar-male-playing-guitar.svg",
+					"position" : "playingguitar"
+				},
+				{
+					"name"     : "Playing Drums",
+					"fileName" : "icon-avatar-male-playing-drums.svg",
+					"position" : "playingdrums"
+				},
+				{
+					"name"     : "Products",
+					"fileName" : "icon-avatar-male-products.svg",
+					"position" : "products"
+				},
+				{
+					"name"     : "Playing Keyboard",
+					"fileName" : "icon-avatar-male-playing-keyboard.svg",
+					"position" : "playingkeyboard"
+				}
+			]
+		},
+		{
+			"female": [
+				{
+					"name"     : "Standing",
+					"fileName" : "icon-avatar-female-standing.svg",
+					"position" : "standing"
+				},
+				{
+					"name"     : "Sitting",
+					"fileName" : "icon-avatar-female-sitting.svg",
+					"position" : "sitting"
+				},
+				{
+					"name"     : "Playing Guitar",
+					"fileName" : "icon-avatar-female-playing-guitar.svg",
+					"position" : "playingguitar"
+				},
+				{
+					"name"     : "Playing Drums",
+					"fileName" : "icon-avatar-female-playing-drums.svg",
+					"position" : "playingdrums"
+				},
+				{
+					"name"     : "Products",
+					"fileName" : "icon-avatar-female-products.svg",
+					"position" : "products"
+				},
+				{
+					"name"     : "Playing Keyboard",
+					"fileName" : "icon-avatar-female-playing-keyboard.svg",
+					"position" : "playingkeyboard"
+				}
+			]
+		}
+	]
+}

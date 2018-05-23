@@ -1,0 +1,38 @@
+<div class="avatar-position_lists">
+	<script id="hb-avatar-position" type="text/x-handlebars-template">
+	<div class="hb-wrapper">
+		<div class="row">
+			<div class="col-12 col-sm-6 border-bottom-xs border-right-sm">
+				<div class="img-holder-container">
+					<div class="wrapper">
+						{{#each position}}
+							{{#each male}}
+								<div class="img-holder" data-position="{{position}}" data-gender="male">
+									<img src="public/images/base-default/{{fileName}}" />
+								</div>
+							{{/each}}
+						{{/each}}
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6">
+				<div class="img-holder-container">
+					<div class="wrapper">
+						{{#each position}}
+							{{#each female}}
+								<div class="img-holder" data-position="{{position}}" data-gender="female">
+									<img src="public/images/base-default/{{fileName}}" />
+								</div>
+							{{/each}}
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="text-center p-3">
+		<a href="#" class="btn btn--standard btn-next is-disabled">Next</a>
+	</div>
+	</script>
+</div>
